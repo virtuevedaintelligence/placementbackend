@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'corsheader',
+    'corsheaders',
     'entity.apps.EntityConfig'
 ]
 
@@ -81,8 +81,12 @@ WSGI_APPLICATION = 'placementbackend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'vritti_developer',
+        'USER': 'vritti_developer',
+        'PASSWORD': 'vritti@2022',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
