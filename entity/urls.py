@@ -1,7 +1,7 @@
-from django.conf.urls import url
+from django.urls import path, include, re_path
 from entity import views
 
 urlpatterns = [
-    url(r'^entity$', views.entityApi),
-    url(r'^entity/([0-9]+)$', views.entityApi())
+    re_path(r'^entity$', views.entityApi),
+    re_path(r'^entity/([0-9]+)$', views.entityApi)
 ]
